@@ -1,58 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&family=Roboto+Mono:wght@200;300&family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
     margin: 0; 
     padding: 0; 
-    background-color: #242524;
-}
-
-li, a, button {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px; 
-    color: white;
+    box-sizing: border-box; 
     text-decoration: none;
 }
 
-header{
+.max-width {
+    max-width: 1300px;
+    padding: 0px 80px; 
+    margin: auto; 
+}
+
+.navbar {
+    display: center;
+    position: fixed; 
+    width: 100%; 
+    padding: 30px 0px; 
+    font-family: 'Roboto Mono', sans-serif;
+    /*background-color: rgb(8, 105, 100); */ 
+}
+
+.navbar.sticky{
+    padding:30px 0px; 
+    background-color: rgb(8, 47, 105);
+}
+
+.navbar .max-width{
     display: flex;
-    justify-content: flex-end; 
-    align-items: center;
-    padding: 30px 10%; 
+    align-items: left;
+    justify-content: space-between;
 }
 
-.logo {
-    cursor: pointer; 
-    margin-right: auto;
+/* add logo with hh */ 
+.navbar .logo a{
+    color: rgb(101, 250, 255); 
+    font-size: 15px;
+    font-weight: 500px;
 }
 
-.nav_links{
+.navbar .menu li{
     list-style: none;
-}
-
-.nav_links li {
     display: inline-block; 
-    padding: 0px 20px; 
 }
 
-.nav_links li a{
-    transition: all 0.3s ease 0s; 
-}
-
-.nav_links li a:hover{
+.navbar .menu li a {
     color: white; 
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
 }
 
-button {
-    margin-left: 20px;
-    padding: 9px 25px; 
-    background-color: black; 
-    border: none; 
-    border-radius: 50px; 
-    cursor: pointer; 
-    transition: all 0.3s ease 0s; 
+.navbar .menu li a:hover {
+    color: rgb(0, 255, 242)
 }
 
-button:hover{
-    background-color: beige; 
+/* home section */ 
+.home{
+    display: flex; 
+    height:100vh; 
+    background-color: rgb(66, 63, 63); 
+    color: white; 
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 100px;
+}
+
+.home .home-content .text-1 {
+    font-size: 15px; 
+    margin-top: -3px; 
+    font-weight: bold;
 }
